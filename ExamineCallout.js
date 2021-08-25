@@ -64,7 +64,7 @@ AFRAME.registerComponent('examinecallout',{
       
       comp.data.numPages = event.detail.associatedEntity.components.examinable.data.contentText.length / 145;
     if(comp.data.numPages > 3){
-      console.Log("Size of pages excedes three, consider reducing text length");
+      //console.Log("Size of pages excedes three, consider reducing text length");
     }
       if(comp.data.numPages > 1){
         rightCalloutButton.setAttribute('visible', true);
@@ -147,22 +147,18 @@ AFRAME.registerComponent('examinecallout',{
       rotTarget.x -= entity.object3D.rotation.x;
       rotTarget.y -= entity.object3D.rotation.y;
       rotTarget.z -= entity.object3D.rotation.z;
-      console.log(rotTarget.y);
       rotTarget.x *= 180.0 / Math.PI;
       rotTarget.y *= 180.0 / Math.PI;
       rotTarget.z *= 180.0 / Math.PI;
-      console.log(rotTarget.y);
       rotTarget.y = (rotTarget.y - 90) % 360;
       //entity.object3D.lookAt(worldCamPos);
       
       TweenMax.to(entity.object3D, 0.4, {three:{positionX: forward.x, positionY: forward.y,positionZ: forward.z}, ease:Sine.easeIn});
       TweenMax.to(entity.object3D, 0.4, {three:{rotationX: rotTarget.x, rotationY: rotTarget.y,rotationZ: rotTarget.z}, ease:Sine.easeIn});
       calloutFocused = true;
-      console.log("going " + " " + calloutFocused);
       return;
     }
     if(calloutFocused){
-      console.log("returning " + " " + calloutStart.x + " " + calloutStart.y + " " + calloutStart.z);
       TweenMax.to(entity.object3D, 0.4, {three:{positionX: calloutStart.x, positionY: calloutStart.y,positionZ: calloutStart.z}, ease:Sine.easeIn});
       TweenMax.to(entity.object3D, 0.4, {three:{rotationX: calloutDefRot.x,
                                                 rotationY: calloutDefRot.y,

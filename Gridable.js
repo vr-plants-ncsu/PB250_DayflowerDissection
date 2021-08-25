@@ -52,19 +52,16 @@ AFRAME.registerComponent('gridable',{
     //go row first, column second
     if(lastPlacement.x / (gridFactorX * 2) >= gridX - 1){
       //move down
-      console.log("mv");
       lastPlacement.y -= (gridFactorY * 2);
       lastPlacement.x = gridOrigin.x;
     }
     lastPlacement.x += (gridFactorX * 2);
-    console.log("Gridding");
     TweenMax.to(entity.object3D, 0.4, {three:{positionX: lastPlacement.x, positionY: lastPlacement.y,positionZ: lastPlacement.z}, ease:Sine.easeIn});
     this.data.isGridded = true;
       canTabSelect = true;
       return;
     }
     if(this.data.isGridded){
-      console.log("Ungridding");
       TweenMax.to(entity.object3D, 0.4,
                   {three:{positionX: this.data.firstPosition.x,
                           positionY: this.data.firstPosition.y,

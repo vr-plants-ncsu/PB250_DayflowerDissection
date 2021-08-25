@@ -30,7 +30,6 @@ AFRAME.registerComponent('scalebutton',{
        let nextScale = entity.components.scalebutton.data.currentScale + scaleDel;
        if(scaleDel == 0)
          nextScale = examObjectBaseScale;
-       console.log("lets see: " + nextScale + " " + entity.components.scalebutton.data.currentScale + " " + scaleDel);
        if(nextScale > entity.components.scalebutton.scaleMax){
          nextScale = entity.components.scalebutton.scaleMax;
        }
@@ -66,7 +65,6 @@ AFRAME.registerComponent('scalebutton',{
        let nextScale = entity.components.scalebutton.data.currentScale + scaleDel;
        if(scaleDel == 0)
          nextScale = examObjectBaseScale;
-       console.log("lets see: " + nextScale + " " + entity.components.scalebutton.data.currentScale + " " + scaleDel);
        if(nextScale > entity.components.scalebutton.scaleMax){
          nextScale = entity.components.scalebutton.scaleMax;
        }
@@ -92,7 +90,6 @@ AFRAME.registerComponent('scalebutton',{
     //we're assuming a uniform scale to start but we'll be applying one anyway
     target = event.detail.cloneEntity;
     entity.components.scalebutton.data.currentScale = examObjectBaseScale;
-    console.log("CScale: " + entity.components.scalebutton.data.currentScale);
   },
   whenScaleDisassociated: function(event){
     target = null;
