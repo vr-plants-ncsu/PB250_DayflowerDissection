@@ -140,7 +140,7 @@
     <a-asset-item id="sepalsUp" 
                       src="./assets/Dayflower_Base_SepalUp.gltf" preload="auto"></a-asset-item>
     <a-asset-item id="sexOrgans" 
-                      src="./assets/Dayflower_Base_SexualOrgans.gltf" preload="auto"></a-asset-item>
+                      src="./assets/Dayflower_Base_SexualOrgansHalf.glb" preload="auto"></a-asset-item>
     <a-asset-item id="stamen1" 
                       src="./assets/Dayflower_Base_Stamen01.gltf" preload="auto"></a-asset-item>
         <a-asset-item id="stamen2" 
@@ -153,6 +153,9 @@
                       src="./assets/Dayflower_Base_Staminode02.gltf" preload="auto"></a-asset-item>
     <a-asset-item id="stamenode3" 
                       src="./assets/Dayflower_Base_Staminode03.gltf" preload="auto"></a-asset-item>
+    <a-asset-item id="overy" 
+                      src="./assets/Dayflower_CrossSectionHalf.glb" preload="auto"></a-asset-item>
+
 
 
 
@@ -456,6 +459,16 @@
                 shadow                 
                 scale="0.25 0.25 0.25"
                gltf-model="#sexOrgans"
+                 >
+          </a-entity>
+          <a-entity id="dayflowerovery" 
+                mixin="overySpec" 
+                 class="dissect"
+               hovercallout="hoverText: Overy;"
+                hoverable clickdrag="centerOffset: 0 -0.1 0" gridable
+                shadow                 
+                scale="0.25 0.25 0.25"
+               gltf-model="#overy"
                  >
           </a-entity>
       </a-entity>
