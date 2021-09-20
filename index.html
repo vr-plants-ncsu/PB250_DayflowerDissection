@@ -92,7 +92,7 @@
     <a-sound id="stamenodeVO" src="./assets/Tallis_Dayflower_03.wav" preload="auto"></a-sound>
     <a-sound id="stamenVO" src="./assets/Tallis_Dayflower_04.wav" preload="auto"></a-sound>
     <a-sound id="pistilVO" src="./assets/Tallis_Dayflower_05.wav" preload="auto"></a-sound>
-    <a-sound id="overyVO" src="./assets/Tallis_Dayflower_06.wav" preload="auto"></a-sound>
+    <a-sound id="ovaryVO" src="./assets/Tallis_Dayflower_06.wav" preload="auto"></a-sound>
     <a-sound id="overviewVO" src="./assets/Tallis_Dayflower_07.wav" preload="auto"></a-sound>
     
 <!--     Text for the various anatomical callouts are supplied via mixin -->
@@ -118,7 +118,7 @@
                           contentText: The pistil consists of an ovary, style, and stigma. The ovary produces ovules and nourishes them as they develop into seeds.;
                           audioClipUrl: #pistilVO;
                           centerOffset: -0.166, -0.253, 0.014;"></a-mixin>
-        <a-mixin id="overySpec" 
+        <a-mixin id="ovarySpec" 
               examinable="headerText: Dayflower Ovary;
                           contentText: The ovary has three chambers (locules) separated by walls (septa). Each locule contains two rows of ovules that will mature into seeds.;
                           audioClipUrl: #ovaryVO;"></a-mixin>
@@ -462,7 +462,7 @@
                  >
           </a-entity>
           <a-entity id="dayflowerovery" 
-                mixin="overySpec" 
+                mixin="ovarySpec" 
                  class="dissect"
                hovercallout="hoverText: Overy;"
                 hoverable clickdrag="centerOffset: 0 -0.1 0" gridable
