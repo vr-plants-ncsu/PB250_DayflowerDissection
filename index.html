@@ -313,7 +313,8 @@
           geometry="primitive: ring; radiusInner: 0.1; radiusOuter: 0.2" 
           mixin="" 
           class="dissect" 
-          rotatable="targetId: dayflowerwholedissection; rotateZ: false">
+          rotatable="targetId: dayflowerwholedissection; rotateZ: false"
+          hovercallout="hoverText: Rotate Specimen;">
   </a-entity>
   
   <a-text id="callouttext" text="color: #000000; value: " position="-0.731 3.2 -3.818" scale="" rotation="23.218105811951983 14.442172100685982 0"></a-text>
@@ -507,7 +508,7 @@
  
   <a-entity id="ExaminationScaleUI" layout="margin: 1.35; angle: NaN; columns: 3" scale="0.075 0.075 0.05" position="0.624 1.204 -1.120" rotation="0 -55 0">
   <a-box id="scale1button" scale="0.3 0.3 0.3" class="dissect" position="" scalebutton="scaleDelta: -0.1; scaleMin: 0.1" gltf-model="#buttonOut"
-         sound="src: #click1; on: click" hovercallout="hoverText: Zoom In;"
+         sound="src: #click1; on: click" hovercallout="hoverText: Zoom Out;"
 
         
          event-set__lightscale1light = "
@@ -561,7 +562,7 @@
     <a-entity id="scale2light" light="type:  point;  color:  #56b4e9;  decay:  1.5;  distance:  0.075;  intensity:  20"></a-entity></a-box>
   
   <a-box id="scale3button" scale="0.3 0.3 0.3" class="dissect" position="4 0 0" material="color: #0072b2; opacity: 0.65" scalebutton="scaleDelta: 0.1; scaleMax: 0.6" gltf-model="#buttonIn"
-         sound="src: #click3; on: click" hovercallout="hoverText: Zoom Out;"
+         sound="src: #click3; on: click" hovercallout="hoverText: Zoom In;"
          
          event-set__scaled3 = "
                 _event : click;
